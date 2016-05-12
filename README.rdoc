@@ -5,7 +5,7 @@
     http://lambda-2-type-checker.herokuapp.com/
 
 == Sample Formatted Terms  
-=== 　
+===  
 Plus: \n : AX.((X) -> (X)) -> ((X) -> (X)) . \m : AX.((X) -> (X)) -> ((X) -> (X)) . ((n [AX.((X) -> (X)) -> ((X) -> (X))]) (\n : AX.((X) -> (X)) -> ((X) -> (X)) . \X.\s : (X) -> (X) . \z : X .(s) (((n[X]) (s)) (z)))) (m)  
 ===  
 0: \X:.\s : (X -> X) . \z : X . z  
