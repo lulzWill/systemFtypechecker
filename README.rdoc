@@ -1,28 +1,13 @@
 == README
+    Type Checker for System F
+    
+== Deployed URL
+    http://lambda-2-type-checker.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== Sample Formatted Terms
+    Plus: \n : AX.((X) -> (X)) -> ((X) -> (X)) . \m : AX.((X) -> (X)) -> ((X) -> (X)) . ((n [AX.((X) -> (X)) -> ((X) -> (X))]) (\n : AX.((X) -> (X)) -> ((X) -> (X)) . \X.\s : (X) -> (X) . \z : X .(s) (((n[X]) (s)) (z)))) (m)
+	0: \X:.\s : (X -> X) . \z : X . z
+	S:  \n:AX.((X)->(X))->((X)->(X)).\X.\s:(X)->(X).\z:X.(s)(((n[X])(s))(z))
+	Failing term: \y : (X -> X) . x
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+    
