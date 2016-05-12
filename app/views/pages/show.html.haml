@@ -1,0 +1,24 @@
+%div.container
+  %div.row
+    %div.panel.panel-default{:style => 'margin-top:20%;'}
+      %div.panel-body{:style => 'height: 40%;'}
+        = form_tag 'checktype', :id => 'typecheck_form' do
+          %div.row
+            %h1{:style => 'margin-left: 2%;'} Check a term!
+            %p{:style => 'margin-left: 2%'} 
+              All applications must be explicitly annotated inside of () ie. the application: x x must be annotated as (x)(x)
+              %br
+              Type Applications must also be annotated inside of () with an arrow between them ie: X -> X must be annotated as (X)->(X)
+              %br
+              For For All, use 'A'
+              %br
+              For Lambdas, use '\'
+          %div.row
+            %div.col-sm-6
+              %div.form-group.row
+                = label :term, :term, 'Lambda Term', :class => 'col-sm-2'
+                = text_field :term, 'term', :id => 'term', :class => 'col-sm-9'
+          %div.row{:style => "margin-left: 2%;"}     
+            = submit_tag 'Check Term', :id => 'type_submit', :class => 'btn btn-success'
+        -if flash[:notice]
+          %p #{flash[:notice]}
